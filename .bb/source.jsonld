@@ -1,0 +1,46 @@
+{
+  "@context": "../../context/source.context.jsonld",
+  "@type": "dcat:Dataset",
+  "@id": "https://biobricks.ai/bricks/harmonizome",
+  "dcterms:title": "Harmonizome",
+  "dcterms:description": "The Harmonizome, a collection of processed gene- and protein-attribute datasets mined from over a hundred publicly available resources, produced by the Ma'ayan Laboratory at the Icahn School of Medicine at Mount Sinai. The brick's download script (stages/01_download.py) is the official Harmonizome downloader that fetches gene_attribute matrices and gene-set libraries from https://maayanlab.cloud/static/hdfs/harmonizome/data/. Because Harmonizome aggregates >100 upstream resources (e.g. COSMIC, KEGG, TRANSFAC, CTD), individual component datasets may carry their own additional restrictions.",
+  "dcterms:license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "dcterms:creator": "Ma'ayan Laboratory, Icahn School of Medicine at Mount Sinai",
+  "dcterms:publisher": "Ma'ayan Laboratory / Mount Sinai (maayanlab.cloud)",
+  "dcterms:identifier": "https://maayanlab.cloud/Harmonizome/",
+  "biobricks:licenseName": "CC BY-NC-SA 4.0",
+  "biobricks:licenseClass": "restricted",
+  "biobricks:merckCommercialUse": "prohibited",
+  "biobricks:licenseEvidence": [
+    {
+      "source": "stages/01_download.py + README.md",
+      "quote": "## script provided by Harmonizome at https://maayanlab.cloud/Harmonizome/static/harmonizomedownloader.py ... url = 'https://maayanlab.cloud/static/hdfs/harmonizome/data/...' ; README: 'source: https://maayanlab.cloud/Harmonizome/'",
+      "confidence": "high"
+    },
+    {
+      "source": "https://maayanlab.cloud/Harmonizome/terms",
+      "quote": "Free for academic, non-profit use under the CC BY NC SA 4.0 License. For commercial uses please contact Mount Sinai Innovation Partners for a license.",
+      "confidence": "high"
+    }
+  ],
+  "biobricks:reviewed": false,
+  "biobricks:reviewNotes": "Determined by the BioBricks licensing-provenance annotation agent (Claude, slice items[786:792]). The Harmonizome site terms explicitly state the data are 'Free for academic, non-profit use under the CC BY NC SA 4.0 License' and that commercial use requires a separate license from Mount Sinai Innovation Partners. CC BY-NC-SA 4.0 is non-commercial + share-alike => classed restricted; commercial use is prohibited without a Mount Sinai license. HUMAN REVIEW: Harmonizome aggregates >100 upstream databases, several of which (e.g. COSMIC, KEGG, TRANSFAC) carry their own additional non-commercial or license-required terms, so even a Mount Sinai commercial license would not necessarily clear every component.",
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://maayanlab.cloud/Harmonizome/",
+      "dcterms:title": "Harmonizome (Ma'ayan Laboratory, Mount Sinai)",
+      "dcterms:license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "dcterms:publisher": "Ma'ayan Laboratory / Icahn School of Medicine at Mount Sinai",
+      "dcat:landingPage": "https://maayanlab.cloud/Harmonizome/"
+    }
+  ],
+  "prov:wasGeneratedBy": {
+    "@type": "prov:Activity",
+    "prov:wasAssociatedWith": "BioBricks licensing-provenance annotation agent (Claude, slice items[786:792])",
+    "prov:endedAtTime": {
+      "@type": "xsd:dateTime",
+      "@value": "2026-08-05T00:00:00Z"
+    }
+  }
+}
